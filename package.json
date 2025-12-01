@@ -1,21 +1,21 @@
 {
-  "name": "json-to-excel-converter",
-  "version": "1.0.0",
-  "description": "将JSON数据转换为Excel文件的工具",
-  "main": "convertToExcelFixed.js",
-  "scripts": {
-    "start": "node convertToExcelFixed.js"
-  },
-  "dependencies": {
-    "axios": "^1.12.2",
-    "xlsx": "^0.18.5"
-  },
-  "keywords": [
-    "json",
-    "excel",
-    "converter",
-    "xlsx"
-  ],
-  "author": "",
-  "license": "MIT"
+	"name": "json-to-excel-converter",
+	"version": "1.0.0",
+	"description": "将JSON数据转换为Excel文件的工具",
+	"main": "src/main.js",
+	"scripts": {
+		"start": "node src/main.js"
+	},
+	"dependencies": {
+		"axios": "^1.12.2",
+		"xlsx": "^0.18.5"
+	},
+	"keywords": [
+		"json",
+		"excel",
+		"converter",
+		"xlsx"
+	],
+	"author": "",
+	"license": "MIT"
 }
