@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>查业主-Excel导出</title>
+		<link rel="stylesheet" href="popup.css" />
+	</head>
+	<body>
+		<main class="app">
+			<section class="card status-card">
+				<div class="status-row">
+					<div>
+						<p class="eyebrow">当前页面</p>
+						<p class="status-text" id="pageStatus">正在读取...</p>
+					</div>
+					<button class="ghost-button" id="rescanButton" type="button">重新扫描</button>
+				</div>
+				<p class="hint" id="pageHint">先打开建工数据页面并执行一次查询</p>
+			</section>
+
+			<section class="card">
+				<div class="section-head">
+					<div>
+						<p class="eyebrow">已捕获条件</p>
+						<p class="section-title">条件列表</p>
+					</div>
+					<div class="button-inline">
+						<button class="ghost-button" id="refreshButton" type="button">刷新</button>
+						<button class="ghost-button" id="toggleSelectButton" type="button">全选</button>
+					</div>
+				</div>
+				<div class="query-list" id="queryList"></div>
+			</section>
+
+			<section class="card export-card">
+				<div class="section-head">
+					<div>
+						<p class="eyebrow">导出状态</p>
+						<p class="section-title" id="exportMessage">等待导出</p>
+					</div>
+				</div>
+				<div class="progress-track" aria-hidden="true">
+					<div class="progress-fill" id="exportProgressBar"></div>
+				</div>
+				<p class="progress-text" id="exportProgressText">0%</p>
+				<p class="hint" id="exportDetail">选中条件后即可导出</p>
+				<div class="actions">
+					<button class="secondary-button" id="clearButton" type="button">清空条件</button>
+					<button class="primary-button" id="exportButton" type="button">导出选中</button>
+				</div>
+			</section>
+		</main>
+		<script src="popup.js"></script>
+	</body>
+</html>

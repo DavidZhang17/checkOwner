@@ -1,3 +1,4 @@
+.DS_Store
 # Logs
 logs
 *.log
@@ -61,7 +62,6 @@ web_modules/
 
 # Output of 'npm pack'
 *.tgz
-files/*.xlsx
 # Yarn Integrity file
 .yarn-integrity
 
@@ -94,7 +94,6 @@ dist
 # vuepress v2.x temp and cache directory
 .temp
 .cache
-
 # Sveltekit cache directory
 .svelte-kit/
 

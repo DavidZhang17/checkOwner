@@ -1,21 +1,24 @@
 {
-	"name": "json-to-excel-converter",
+	"name": "checkowner-extension",
 	"version": "1.0.0",
-	"description": "将JSON数据转换为Excel文件的工具",
-	"main": "src/main.js",
+	"private": true,
+	"description": "查业主-Excel导出浏览器扩展项目",
 	"scripts": {
-		"start": "node src/main.js"
-	},
-	"dependencies": {
-		"axios": "^1.12.2",
-		"xlsx": "^0.18.5"
+		"clean": "node scripts/package-extension.js clean",
+		"pack": "node scripts/package-extension.js all",
+		"pack:chrome": "node scripts/package-extension.js chrome",
+		"pack:edge": "node scripts/package-extension.js edge",
+		"pack:firefox": "node scripts/package-extension.js firefox"
 	},
 	"keywords": [
-		"json",
-		"excel",
-		"converter",
-		"xlsx"
+		"browser-extension",
+		"chrome-extension",
+		"edge-extension",
+		"firefox-extension"
 	],
 	"author": "",
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		"archiver": "^7.0.1"
+	}
 }

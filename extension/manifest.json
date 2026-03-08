@@ -1,0 +1,68 @@
+{
+  "manifest_version": 3,
+  "name": "查业主-Excel导出",
+  "version": "1.0.0",
+  "description": "自动抓取建工数据页面的 token 和查询参数，并导出人员 Excel。",
+  "permissions": [
+    "storage",
+    "downloads",
+    "tabs",
+    "scripting",
+    "cookies",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "https://*.jiangongdata.com/*",
+    "http://*.jiangongdata.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "查业主-Excel导出",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.jiangongdata.com/*",
+        "http://*.jiangongdata.com/*"
+      ],
+      "js": [
+        "content-script.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://owner.jiangongdata.com/*",
+        "http://owner.jiangongdata.com/*"
+      ],
+      "js": [
+        "auto-panel.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "page-bridge.js"
+      ],
+      "matches": [
+        "https://*.jiangongdata.com/*",
+        "http://*.jiangongdata.com/*"
+      ]
+    }
+  ]
+}
